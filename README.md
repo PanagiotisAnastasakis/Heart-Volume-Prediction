@@ -153,7 +153,8 @@ Plasencia, J. D., Kamarianakis, Y., Ryan, J. R., et al. (2018). "Alternative me
 
 ## Repository Structure
 
-Heart Volume Prediction/
+```text
+Heart-Volume-Prediction/
 ├── Code/
 │   ├── Data_exploration_preprocessing.R
 │   ├── Main_script.R
@@ -163,6 +164,7 @@ Heart Volume Prediction/
 ├── BSc_Thesis.Rproj
 ├── README.md
 └── Thesis.pdf
+```
 
 * `Data_exploration_preprocessing.R`: Contains the code for the initial exploration and preprocessing of the pediatric heart-volume dataset, including the preparation of variables for the statistical analysis.
 * `Main_script.R`: Contains the main analysis pipeline, including the implementation and comparison of regression models with symmetric and asymmetric loss functions, as well as their evaluation.
