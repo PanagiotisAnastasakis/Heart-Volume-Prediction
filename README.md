@@ -83,13 +83,11 @@ The study also considers a logarithmic transformation of the response for two re
 
 Quantile regression estimates a conditional quantile rather than the conditional mean. It uses the pinball loss:
 
-\[
-`\rho`{=tex}\_`\tau`{=tex}(u)=u`\bigl`{=tex}(`\tau`{=tex}-`\mathbb{1}`{=tex}(u\<0)`\bigr`{=tex}),
-\]
+$$\rho_\tau(u) = u \bigl(\tau - \mathbb{1}(u < 0)\bigr),$$
 
-where (u) is the prediction error and (`\tau`{=tex}) is the target quantile.
+where $u$ is the prediction error and $\tau$ is the target quantile.
 
-At (`\tau=0.5`{=tex}), the method corresponds to median regression. At **(`\tau=0.75`{=tex})**, under-predictions receive three times the penalty of over-predictions of the same magnitude. This is the principal asymmetric setting examined for the transplant-size motivation.
+At $\tau=0.5$, the method corresponds to median regression. At $\tau=0.75$, under-predictions receive three times the penalty of over-predictions of the same magnitude. This is the principal asymmetric setting examined for the transplant-size motivation.
 
 The Thesis studies ordinary quantile regression and Lasso-penalized quantile regression. Three R package implementations are compared:
 
@@ -112,8 +110,8 @@ The evaluation framework includes:
 Multiple error criteria are used because no single metric fairly represents every model's objective:
 
 -   Mean squared error (MSE), a symmetric criterion.
--   Mean quantile loss at (`\tau=0.5`{=tex}), a symmetric absolute-error criterion up to scale.
--   Mean quantile loss at (`\tau=0.75`{=tex}), which penalizes under-prediction more heavily.
+-   Mean quantile loss at $\tau=0.5$, a symmetric absolute-error criterion up to scale.
+-   Mean quantile loss at $\tau=0.75$, which penalizes under-prediction more heavily.
 
 This distinction is important for interpreting the results: a model optimized for symmetric error may not be the best model under an asymmetric evaluation criterion.
 
@@ -121,9 +119,9 @@ This distinction is important for interpreting the results: a model optimized fo
 
 The conclusions depend on the evaluation objective and are presented thoroughly in the Thesis. A brief summary is discussed here:
 
-Under symmetric criteria, Ridge and Lasso regression perform better than the quantile-regression candidates when assessed using MSE and median ((`\tau=0.5`{=tex})) quantile loss. Ridge performs better than Lasso in this application. This is likely due to the feature-selection stage: after VIF-based filtering, many of the remaining predictors are expected to be informative, a setting in which Ridge can have an advantage over Lasso.
+Under symmetric criteria, Ridge and Lasso regression perform better than the quantile-regression candidates when assessed using MSE and median ($\tau=0.5$) quantile loss. Ridge performs better than Lasso in this application. This is likely due to the feature-selection stage: after VIF-based filtering, many of the remaining predictors are expected to be informative, a setting in which Ridge can have an advantage over Lasso.
 
-Under asymmetric criteria, specifically under (`\tau=0.75`{=tex}) quantile loss, quantile regression in the upper quantiles becomes more competitive. When fitted at (`\tau=0.75`{=tex}), quantile methods outperform Ridge and Lasso. The penalized `hqreg` and `quantreg` implementations achieve the lowest reported mean (`\rho`{=tex}\_{0.75}) errors, with `hqreg` being slightly better.
+Under asymmetric criteria, specifically under $\tau=0.75$ quantile loss, quantile regression in the upper quantiles becomes more competitive. When fitted at $\tau=0.75$, quantile methods outperform Ridge and Lasso. The penalized `hqreg` and `quantreg` implementations achieve the lowest reported mean $\rho\_{0.75}$ errors, with `hqreg` being slightly better.
 
 However, it must be noted that the differences between higher-quantile regression and Ridge/Lasso under the asymmetric metric are relatively small. In contrast, Ridge and Lasso have a clearer advantage under symmetric metrics. Thus, choosing a model requires deciding which prediction errors matter most for the application.
 
