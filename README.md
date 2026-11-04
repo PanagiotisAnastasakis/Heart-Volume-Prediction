@@ -153,13 +153,11 @@ Plasencia, J. D., Kamarianakis, Y., Ryan, J. R., et al. (2018). "Alternative me
 
 ## Repository Structure
 
-BSc-Thesis/
-│
+Heart Volume Prediction/
 ├── Code/
 │   ├── Data_exploration_preprocessing.R
 │   ├── Main_script.R
 │   └── helper.R
-│
 ├── .DS_Store
 ├── .gitignore
 ├── BSc_Thesis.Rproj
