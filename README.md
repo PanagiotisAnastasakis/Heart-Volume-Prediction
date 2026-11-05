@@ -138,7 +138,7 @@ The application is based on only 54 pediatric observations after exclusions. Thi
 
 The findings are specific to the dataset, feature construction, validation design and model implementations described in the Thesis. They do not establish clinical safety, causal relationships, or suitability for real-world transplant allocation. A prediction of heart volume is only one possible input to donor-recipient compatibility assessment. Clinical use would require independent validation on larger and more representative data, careful assessment of calibration and uncertainty, review by relevant clinical experts, and appropriate governance.
 
-## Reference
+## References
 
 Anastasakis, Panagiotis (2023). *Predictive Modeling with Asymmetric Loss Functions*. Diploma Thesis, Department of Mathematics & Applied Mathematics, University of Crete. Supervisor: Dr. Yiannis Kamarianakis. June 16th, 2023.
 
