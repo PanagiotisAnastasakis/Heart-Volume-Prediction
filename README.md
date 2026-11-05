@@ -169,10 +169,6 @@ Heart-Volume-Prediction/
 * `Data_exploration_preprocessing.R`: Contains the code for the initial exploration and preprocessing of the pediatric heart-volume dataset, including the preparation of variables for the statistical analysis.
 * `Main_script.R`: Contains the main analysis pipeline, including the implementation and comparison of regression models with symmetric and asymmetric loss functions, as well as their evaluation.
 * `helper.R`: Contains additional helper functions used throughout the analysis.
-* `BSc_Thesis.Rproj`: The RStudio project file, which can be used to open the project in RStudio.
-* `.gitignore`: Specifies files and directories that Git should ignore.
-* `.DS_Store`: A macOS system file that stores folder display preferences.
-* `README.md`: Provides an overview of the Thesis, its methodology, repository contents, and data availability.
 * `Thesis.pdf`: Contains the full Thesis, including the theoretical background, methodology, experimental results, and conclusions.
 
 **Data Availability and Reproducibility:** The original dataset used in this study is not publicly distributed and is therefore not included in this repository. Consequently, although the R scripts and analysis procedures are publicly available, the code cannot be executed independently or the reported results fully reproduced without access to the original dataset. Access to the data is subject to the relevant permissions and data-sharing restrictions.
