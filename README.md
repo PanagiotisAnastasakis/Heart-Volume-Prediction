@@ -7,6 +7,8 @@
 **Department:** Mathematics & Applied Mathematics, University of Crete\
 **Thesis date:** June, 2023
 
+*This is a summary of research conducted on predictive modelling of heart volume for pediatric patients that are candidates for heart transplantation, leading to a Diploma Thesis at the Department of Mathematics and Applied Mathematics, University of Crete (2023). The study investigates the use of least-squares and quantile-regression methods to account for asymmetric prediction errors in the context of pediatric heart transplantation. For detailed methodological descriptions, data preprocessing procedures, model specifications, figures and complete results please refer to the accompanying Thesis: Predictive Modeling with Asymmetric Loss Functions (University of Crete, 2023).*
+
 ------------------------------------------------------------------------
 
 ## 1. Project Overview
@@ -30,15 +32,15 @@ Note that this work is a statistical investigation and methodological comparison
 
 The application uses somatometric measurements and corresponding heart-volume observations. The original dataset contains **58 observations** and six candidate predictors:
 
-  Variable   Description                  Unit / coding
-  ---------- ---------------------------- ----------------------
-  `Male`     Patient sex indicator        1 = male, 0 = female
-  `Age`      Patient age                  months
-  `Ht`       Height                       cm
-  `Wt`       Weight                       kg
-  `BMI`      Body mass index              kg/m²
-  `BSA`      Body surface area            m²
-  `HtVol`    **Response:** heart volume   mL
+  | Variable | Description | 
+  | ---------- | ---------------------------- |
+  |`Male` | Patient sex indicator (1 = male, 0 = female) |
+  |`Age` | Patient age (months) |
+  |`Ht` | Height (cm) |
+  |`Wt` | Weight (kg) |
+  |`BMI` | Body mass index (kg/m²) |
+  |`BSA` | Body surface area  (m²) |
+  |`HtVol` | **Response:** heart volume (mL) |
 
 Four observations correspond to patients older than 18 years (216 months). They are excluded because the application focuses on pediatric patients, leaving **54 observations**.
 
@@ -65,7 +67,7 @@ This feature engineering is intended to relax simple linear-model assumptions wh
 
 ## 3. Modeling Strategy
 
-The Thesis compares two broad families of linear models.
+The Thesis compares two broad families of linear models:
 
 ### Least-squares models
 
@@ -99,7 +101,7 @@ An important conclusion of the implementation comparison is that the optimizatio
 
 ## 4. Model Evaluation
 
-Because the dataset is small and the models involve feature and hyperparameter choices, the Thesis emphasizes repeated validation rather than relying on a single train/test split.
+Because the dataset is small and the models involve feature and hyperparameter choices, repeated validation is opted for rather than relying on a single train/test split.
 
 The evaluation framework includes:
 
